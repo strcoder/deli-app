@@ -1,0 +1,45 @@
+@import '../../../sass/utils/variables';
+
+.SchoolCard {
+  gap: 10px;
+  padding: 25px;
+  border-radius: $border-radius;
+  transition: $transition-theme;
+  animation-duration: $animate-duration;
+}
+
+.SchoolCard__header {
+  gap: 25px;
+  align-content: center;
+  grid-template-columns: auto 1fr;
+}
+
+.SchoolCard__header figure {
+  width: 60px;
+  height: 60px;
+}
+
+.SchoolCard__header figure img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.SchoolCard__body {
+  gap: 10px;
+}
+
+.SchoolCard__body .flex {
+  justify-content: space-between;
+  padding-top: 10px;
+}
+
+.SchoolCard__body .flex > a:first-child {
+  padding: 0;
+  justify-self: flex-start;
+}
+
+@media screen and (min-width: 375px) {
+  .SchoolCard {
+    width: 320px;
+  }
+}

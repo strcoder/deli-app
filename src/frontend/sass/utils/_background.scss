@@ -1,0 +1,53 @@
+@each $name, $color in $text-white-shades-grey {
+  .bg-#{$name} {
+    @include background($color, $soft-color);
+  }
+}
+
+@each $name, $color in $text-black-shades-grey {
+  .bg-#{$name} {
+    @include background($color, $black);
+  }
+}
+
+@each $name, $color in $text-white-generic-colors {
+  .bg-#{$name} {
+    @include background($color, $soft-color);
+  }
+}
+
+@each $name, $color in $text-black-generic-colors {
+  .bg-#{$name} {
+    @include background($color, $black);
+  }
+}
+
+@each $name, $color in $brand-colors {
+  .bg-#{$name} {
+    @include background($color);
+  }
+}
+
+@each $name, $color in $text-white-brand-colors {
+  .bg-#{$name} {
+    @include background($color, $soft-color);
+  }
+}
+
+@each $name, $color in $text-black-brand-colors {
+  .bg-#{$name} {
+    @include background($color, $primary-color);
+  }
+}
+
+@each $name, $color in $text-white-dark-brand-colors {
+  .bg-#{$name} {
+    @include background($color, $soft-color);
+  }
+}
+
+@each $name, $color in $text-black-dark-brand-colors {
+  .bg-#{$name} {
+    @include background($color, $primary-color);
+  }
+}

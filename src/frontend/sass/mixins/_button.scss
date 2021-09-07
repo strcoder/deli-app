@@ -1,0 +1,123 @@
+@mixin button($color: $soft-color, $background: $primary-color) {
+  color: $color;
+  background-color: $background;
+  @include shadow($background);
+  @if (type-of($background) == 'color') {
+    &:hover {
+      background-color: darken($background, 2%);
+    }
+    &:active, &:focus {
+      box-shadow: 0 0 0 0.2em rgba($background, 0.5);
+    }
+  }
+}
+
+@mixin buttonLink($color: $primary-color) {
+  color: $color;
+  border: none;
+  background: none;
+}
+
+@mixin buttonPill($color: $soft-color, $background: $primary-color) {
+  @include button($color, $background);
+  border-radius: $border-radius-pill;
+}
+
+@mixin buttonOutline($color: $primary-color, $background: $soft-color) {
+  color: $color;
+  background: none;
+  border: 1px solid $color;
+  &:hover {
+    color: $background;
+    background-color: $color;
+  }
+  &:active, &:focus {
+    box-shadow: 0 0 0 0.2em rgba($color, 0.5);
+  }
+}
+
+@mixin buttonOutlineBlack($color, $border, $colorHover, $background) {
+  color: $color;
+  background: none;
+  border: 1px solid $border;
+  &:hover {
+    color: $colorHover;
+    background-color: $background;
+  }
+}
+
+@mixin buttonOutlinePill($color: $primary-color, $background: $soft-color) {
+  @include buttonOutline($color, $background);
+  border-radius: $border-radius-pill;
+}
+
+@mixin buttonCircle($color: $soft-color, $background: $primary-color) {
+  @include button($color, $background);
+  width: 50px;
+  height: 50px;
+  padding: 12px;
+  min-width: 50px;
+  min-height: 50px;
+  overflow: hidden;
+  border-radius: $circle-radius;
+  & .btn-icon:nth-child(1) { padding: 0; }
+  & .btn-icon:nth-child(2) { padding: 0; }
+  & .btn-txt, & .btn-txt {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    transform: scale(0);
+    transition: $transition-base;
+  }
+  &:hover {
+    width: auto;
+    height: auto;
+    border-radius: $border-radius-pill;
+  }
+  &:hover .btn-txt, &:hover .btn-txt {
+    opacity: 1;
+    width: auto;
+    height: auto;
+    transform: scale(1);
+  }
+  &:hover .btn-icon:nth-child(1) { padding-right: 5px; }
+  &:hover .btn-icon:nth-child(2) { padding-left: 5px; }
+}
+
+@mixin buttonCircleOutline($color: $soft-color, $background: $primary-color) {
+  @include buttonCircle($color);
+  @include buttonOutline($background, $color);
+  box-shadow: none;
+  // padding: 12px;
+  // // width: fit-content;
+  // // height: fit-content;
+  // border-radius: $circle-radius;
+  // & .btn-icon:nth-child(1) { padding: 0; }
+  // & .btn-icon:nth-child(2) { padding: 0; }
+  // & .btn-txt, & .btn-txt {
+  //   width: 0;
+  //   height: 0;
+  //   opacity: 0;
+  //   transform: scale(0);
+  //   transition: $transition-base;
+  // }
+  // &:hover {
+  //   border-radius: $border-radius-pill;
+  // }
+  // &:hover .btn-txt, &:hover .btn-txt {
+  //   opacity: 1;
+  //   width: auto;
+  //   height: auto;
+  //   transform: scale(1);
+  // }
+  // &:hover .btn-icon:nth-child(1) { padding-right: 5px; }
+  // &:hover .btn-icon:nth-child(2) { padding-left: 5px; }
+}
+
+@mixin buttonSocialCircular($color, $background) {
+  @include button($color, $background);
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: $circle-radius;
+}

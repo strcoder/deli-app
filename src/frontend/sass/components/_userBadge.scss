@@ -1,0 +1,31 @@
+.UserBadge {
+  padding: 0.2rem 0.3rem;
+  font-weight: bold;
+  font-size: $font-size-xs;
+  border-radius: $border-radius;
+
+  &.student {
+    color: $secondary-color;
+    background-color: rgba($secondary-color, 0.2);
+  }
+
+  &.manager {
+    color: $accent-color;
+    background-color: rgba($accent-color, 0.2);
+  }
+
+  &.teacher {
+    color: $success-color;
+    background-color: rgba($success-color, 0.2);
+  }
+
+  &.parent {
+    color: $warning-color;
+    background-color: rgba($warning-color, 0.2);
+  }
+
+  &.admin {
+    color: $danger-color;
+    background-color: rgba($danger-color, 0.2);
+  }
+}

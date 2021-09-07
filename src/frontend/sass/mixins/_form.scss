@@ -1,0 +1,43 @@
+@mixin inputBasic($color, $background, $border) {
+  width: 100%;
+  resize: none;
+  padding: 10px;
+  color: $color;
+  padding-top: 4px;
+  border: 1px solid $border;
+  font-size: $font-size-base;
+  background-color: $background;
+  border-radius: $border-radius;
+  font-family: $font-family-base;
+}
+
+@mixin formSearch {
+  gap: 0;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  & > .form-label {
+    display: grid;
+    row-gap: 10px;
+    align-items: center;
+    grid-template-columns: 1fr auto;
+    & .form-title {
+      grid-column-end: span 2;
+    }
+  }
+  & .text-field,
+  & .form-input {
+    border-right: none !important;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  & .form-button {
+    height: 52px;
+    margin-top: 8px;
+    box-shadow: none;
+    justify-self: left;
+    align-self: flex-start;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+

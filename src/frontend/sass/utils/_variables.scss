@@ -1,0 +1,383 @@
+//* Generic colors *//
+$red: #C4211B;
+$teal: #04445C;
+$cyan: #04ACF4;
+$blue: #0056b3;
+$pink: #FCC4DC;
+$gray: #A6ABBD;
+$green: #048444;
+$white: #ffffff;
+$black: #111111;
+$indigo: #4C0484;
+$purple: #7C0C84;
+$orange: #FB9F06;
+$yellow: #FCFB3B;
+
+//* Shades of grey *//
+$gray-100: #fffbfe;
+$gray-200: #fafbfe;
+$gray-300: #fafafb;
+$gray-400: #e6ebf2;
+$gray-500: #b7c3d3;
+$gray-600: #93a4bc;
+$gray-700: #525c6b;
+$gray-800: #4d535b;
+$gray-900: #424953;
+
+//* Color scheme: Light *//
+// $light-bg: #f4f7f9;
+$light-bg: #fafbfe;
+$primary-color: #A7612C;
+$secondary-color: #A74E4E;
+$tertiary-color: #8F4969;
+$accent-color: #694C74;
+$success-color: #434D6D;
+$warning-color: #2F4858;
+$danger-color: #731632;
+$dark-color: #131618;
+$gray-color: #A6ABBD;
+$grey-color: #727787;
+$soft-color: #f9f9f9;
+$disable-color: #93a5be;
+
+//* Color scheme: Dark *//
+$dark-bg: #222830;
+$dark-color-dark: #0f0f0f;
+$gray-color-dark: #AAAABC;
+$grey-color-dark: #757687;
+$soft-color-dark: #fafafa;
+
+//* Brand colors *//
+$slack: #611f69;
+$google: #db4337;
+$twitch: #4b367c;
+$paypal: #033e8c;
+$github: #090909;
+$twitter: #1da1f2;
+$youtube: #a11918;
+$dribbble: #ea4c89;
+$facebook: #3b5999;
+$linkedin: #048abf;
+$pinterest: #8c0615;
+$instagram: #d6249f;
+$paypal-back: linear-gradient(
+  150deg,
+  rgba(4, 138, 191, 1) 0%,
+  rgba(3, 103, 166, 1) 30%,
+  rgba(3, 90, 166, 1) 70%,
+  rgba(3, 62, 140, 1) 100%
+);
+$instagram-back: radial-gradient(
+  circle at 30% 130%,
+  #fdf497 0%,
+  #fdf497 5%,
+  #fd5949 45%,
+  #d6249f 60%,
+  #285aeb 90%
+);
+
+//* Shadows *//
+$box-shadow: 0 0.5rem 1rem rgba($black, 0.15) !default;
+$box-shadow-lg: 0 1rem 3rem rgba($black, 0.175) !default;
+$box-shadow-sm: 0 0.125rem 0.25rem rgba($black, 0.075) !default;
+
+//* Components *//
+$border-width: 0.0625rem;
+$border-width-md: 0.125rem;
+$border-width-lg: 0.25rem;
+$border-width-xl: 0.375rem;
+$border-color-white: $white;
+$border-color: #bbc1d33f;
+$border-radius: 0.2rem;
+$border-radius-xl: 0.6rem;
+$border-radius-lg: 0.4rem;
+$border-radius-md: 0.2rem;
+$border-radius-sm: 0.1rem;
+$border-radius-pill: 2rem;
+$circle-radius: 50%;
+$organic-radius: 63% 37% 30% 70% / 50% 45% 55% 50%;
+
+// * Transitions *//
+$transition-theme: all 0.5s ease;
+$transition-base: all 0.2s ease;
+$transition-transform: transform 0.2s ease;
+$transition-fade: opacity 0.15s linear;
+$transition-collapse: height 0.35s ease;
+$transition-tabs: all 0.2s;
+
+//* Fonts *//
+$font-family-base: 'Nunito', sans-serif;
+$font-family-headers: 'Montserrat', sans-serif;
+$font-size-base: 1rem;
+$font-size-xxl: ($font-size-base * 2);
+$font-size-xl: ($font-size-base * 1.5);
+$font-size-lg: ($font-size-base * 1.25);
+$font-size-md: ($font-size-base * 1);
+$font-size-sm: ($font-size-base * 0.875);
+$font-size-xs: ($font-size-base * 0.75);
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 600;
+$font-weight-bolder: 700;
+$h1-font-size: $font-size-base * 2.5;
+$h2-font-size: $font-size-base * 2;
+$h3-font-size: $font-size-base * 1.75;
+$h4-font-size: $font-size-base * 1.5;
+$h5-font-size: $font-size-base * 1.25;
+$h6-font-size: $font-size-base;
+
+$font-weight: (
+  'light': $font-weight-light,
+  'normal': $font-weight-normal,
+  'bold': $font-weight-bold,
+  'bolder': $font-weight-bolder,
+);
+
+$font-size: (
+  'base': $font-size-base,
+  'xxl': $font-size-xxl,
+  'xl': $font-size-xl,
+  'lg': $font-size-lg,
+  'md': $font-size-md,
+  'sm': $font-size-sm,
+  'xs': $font-size-xs,
+);
+
+$font-headers: (
+  'h1': $h1-font-size,
+  'h2': $h2-font-size,
+  'h3': $h3-font-size,
+  'h4': $h4-font-size,
+  'h5': $h5-font-size,
+  'h6': $h6-font-size,
+);
+
+//* Screen breackpoints *//
+$breakpoints-width-xxl: 2560px;
+$breakpoints-width-xl: 1920px;
+$breakpoints-width-lg: 1440px;
+$breakpoints-width-md: 1024px;
+$breakpoints-width-sm: 768px;
+$breakpoints-width-mxs: 525px;
+$breakpoints-width-xs: 425px;
+$breakpoints-width-xxs: 375px;
+
+$breakpoints-width: (
+  'xxl': $breakpoints-width-xxl,
+  'xl': $breakpoints-width-xl,
+  'lg': $breakpoints-width-lg,
+  'md': $breakpoints-width-md,
+  'sm': $breakpoints-width-sm,
+  'mxs': $breakpoints-width-mxs,
+  'xs': $breakpoints-width-xs,
+  'xxs': $breakpoints-width-xxs,
+);
+
+//* btn *//
+$btn-size: (
+  'xl': 18px,
+  'lg': 16px,
+  'md': 14px,
+  'sm': 12px,
+  'xs': 10px,
+);
+
+//* Icon *//
+$icon-box-padding: 1rem;
+$icon-shape: 4.5rem;
+$icon-shape-sm: 3rem;
+$icon-shape-lg: 6rem;
+$icon-shape-img: 6rem;
+$icon-shape-bordered: 5rem;
+$icon-size: 2.5rem;
+$icon-size-xs: 1.25rem;
+$icon-size-sm: 1.5rem;
+$icon-size-md: 2rem;
+$icon-size-lg: 2.5rem;
+$icon-size-xl: 3rem;
+
+//** animations **//
+$animate-duration: 1s;
+$animate-delay: 1s;
+$animate-repeat: 1;
+
+//* zIndex *//
+$message-z-index: 1000;
+$overlay-z-index: 1100;
+$modal-z-index: 1200;
+$chat-header-z-index: 1300;
+$important-z-index: 2000;
+
+//* Theme colors *//
+$theme-color: ();
+$theme-color: map-merge(
+  (
+    'dark': $dark-color,
+    'gray': $gray-color,
+    'grey': $grey-color,
+    'soft': $soft-color,
+    'danger': $danger-color,
+    'accent': $accent-color,
+    'disable': $disable-color,
+    'success': $success-color,
+    'warning': $warning-color,
+    'primary': $primary-color,
+    'tertiary': $tertiary-color,
+    'secondary': $secondary-color,
+  ),
+  $theme-color
+);
+
+$shades-grey: ();
+$shades-grey: map-merge(
+  (
+    'white': $white,
+    'black': $black,
+    'gray-100': $gray-100,
+    'gray-200': $gray-200,
+    'gray-300': $gray-300,
+    'gray-400': $gray-400,
+    'gray-500': $gray-500,
+    'gray-600': $gray-600,
+    'gray-700': $gray-700,
+    'gray-800': $gray-800,
+    'gray-900': $gray-900,
+  ),
+  $shades-grey
+);
+
+//* Theme colors *//
+$generic-colors: ();
+$generic-colors: map-merge(
+  (
+    'red': $red,
+    'teal': $teal,
+    'cyan': $cyan,
+    'blue': $blue,
+    'pink': $pink,
+    'green': $green,
+    'indigo': $indigo,
+    'purple': $purple,
+    'orange': $orange,
+    'yellow': $yellow,
+  ),
+  $generic-colors
+);
+
+$brand-colors: ();
+$brand-colors: map-merge(
+  (
+    'slack': $slack,
+    'google': $google,
+    'github': $github,
+    'twitch': $twitch,
+    'paypal': $paypal,
+    'twitter': $twitter,
+    'youtube': $youtube,
+    'linkedin': $linkedin,
+    'facebook': $facebook,
+    'dribbble': $dribbble,
+    'pinterest': $pinterest,
+    'instagram': $instagram,
+  ),
+  $brand-colors
+);
+
+//* Colors with text white *//
+$text-white-brand-colors: ();
+$text-white-brand-colors: map-merge(
+  (
+    'grey': $grey-color,
+    'dark': $dark-color,
+    'danger': $danger-color,
+    'success': $success-color,
+    'warning': $warning-color,
+    'primary': $primary-color,
+    'tertiary': $tertiary-color,
+    'secondary': $secondary-color,
+  ),
+  $text-white-brand-colors
+);
+
+//* Colors with text black *//
+$text-black-brand-colors: ();
+$text-black-brand-colors: map-merge(
+  (
+    'gray': $gray-color,
+    'soft': $soft-color,
+    'accent': $accent-color,
+  ),
+  $text-black-brand-colors
+);
+
+$text-white-dark-brand-colors: ();
+$text-white-dark-brand-colors: map-merge(
+  (
+    'dark': $dark-color-dark,
+  ),
+  $text-white-dark-brand-colors
+);
+
+// //* Colors with text black *//
+$text-black-dark-brand-colors: ();
+$text-black-dark-brand-colors: map-merge(
+  (
+    'gray': $gray-color,
+    'grey': $grey-color,
+    'soft': $soft-color,
+    'disable': $disable-color,
+  ),
+  $text-black-dark-brand-colors
+);
+
+//* TColors with text white *//
+$text-white-generic-colors: ();
+$text-white-generic-colors: map-merge(
+  (
+    'red': $red,
+    'teal': $teal,
+    'blue': $blue,
+    'green': $green,
+    'black': $black,
+    'indigo': $indigo,
+    'purple': $purple,
+  ),
+  $text-white-generic-colors
+);
+
+//* TColors with text black *//
+$text-black-generic-colors: ();
+$text-black-generic-colors: map-merge(
+  (
+    'cyan': $cyan,
+    'pink': $pink,
+    'white': $white,
+    'yellow': $yellow,
+    'orange': $orange,
+    'disable': $disable-color,
+  ),
+  $text-black-generic-colors
+);
+
+$text-white-shades-grey: ();
+$text-white-shades-grey: map-merge(
+  (
+    'gray-700': $gray-700,
+    'gray-800': $gray-800,
+    'gray-900': $gray-900,
+  ),
+  $text-white-shades-grey
+);
+
+$text-black-shades-grey: ();
+$text-black-shades-grey: map-merge(
+  (
+    'gray-100': $gray-100,
+    'gray-200': $gray-200,
+    'gray-300': $gray-300,
+    'gray-400': $gray-400,
+    'gray-500': $gray-500,
+    'gray-600': $gray-600,
+  ),
+  $text-black-shades-grey
+);

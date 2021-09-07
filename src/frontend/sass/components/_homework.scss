@@ -1,0 +1,43 @@
+.Homework {
+  padding: 0.5rem;
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+  border-radius: $border-radius;
+  border: $border-width solid $border-color;
+  color: $gray;
+  transition: $transition-theme;
+
+  &:hover {
+    background-color: rgba($color: $gray, $alpha: 0.2);
+    color: darken($color: $gray, $amount: 20%)
+  }
+  
+  &__header {
+    display: block;
+
+    & > h5 {
+      flex: 1;
+      color: $dark-color;
+    }
+
+    & > span {
+      display: block;
+      color: $dark-color;
+    }
+  }
+
+  &__body {
+    &--author {
+      display: flex;
+      align-items: center;
+      transform-origin: left;
+      transform: scale(0.7);
+
+      & img {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+      }
+    }
+  }
+}

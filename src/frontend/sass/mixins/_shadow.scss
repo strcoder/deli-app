@@ -1,0 +1,7 @@
+@mixin shadow($color) {
+  box-shadow: 0 0.125rem 0.25rem $color;
+}
+
+@mixin shadowSm($color) {
+  box-shadow: 0 0.125rem 0.25rem rgba($color, 0.5);
+}

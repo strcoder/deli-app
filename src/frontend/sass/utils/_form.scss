@@ -1,0 +1,351 @@
+.form {
+  &-control {
+    gap: 20px;
+    padding: 25px;
+    border-radius: $border-radius;
+  }
+  &-hidden {
+    opacity: 0;
+    user-select: none;
+    pointer-events: none;
+  }
+  &-title {
+    padding-bottom: 5px;
+    font-size: $font-size-base;
+  }
+  &-select {
+    height: 50px;
+    margin-top: 10px;
+    background-color: $white;
+  }
+  &-select option {
+    background-color: $white;
+    font-size: $font-size-base;
+    font-family: $font-family-base;
+  }
+  &-message {
+    font-weight: 100;
+    font-size: $font-size-sm;
+  }
+  &-error {
+    font-weight: normal;
+    font-size: $font-size-sm;
+  }
+  &-button {
+    width: 100%;
+  }
+  &-textarea.resize {
+    resize: both;
+  }
+  &-cardExpire {
+    display: flex;
+    & select:first-child {
+      border-radius: 0;
+      border-top-left-radius: $border-radius;
+      border-bottom-left-radius: $border-radius;
+    }
+    & select:last-child {
+      border-radius: 0;
+      border-top-right-radius: $border-radius;
+      border-bottom-right-radius: $border-radius;
+    }
+  }
+  &-checkbox {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    & > p {
+      padding-left: 5px;
+    }
+  }
+  &-search {
+    @include formSearch();
+  }
+}
+
+body.light {
+  .form-input,
+  .form-textarea,
+  .form-select {
+    @include inputBasic($primary-color, $white, $border-color);
+  }
+
+  .form-select {
+    &:active, &:focus {
+      border: 2px solid $black;
+    }
+  }
+}
+
+body.dark {
+  .form-input,
+  .form-textarea,
+  .form-select {
+    @include inputBasic($soft-color, darken($dark-bg, 4%), $gray-700);
+  }
+  .form-select {
+    &:active, &:focus {
+      border: 2px solid $white;
+    }
+  }
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.custom-checkbox p {
+  margin: 0;
+  padding-left: 10px;
+  transition: $transition-base;
+}
+
+.checkbox-radio {
+  padding: 5px;
+  min-width: 28px;
+  min-height: 28px;
+  color: $primary-color;
+  border: 1px solid $gray-500;
+  transition: $transition-base;
+  border-radius: $circle-radius;
+}
+
+.custom-checkbox.true > .checkbox-radio {
+  color: $soft-color;
+  animation: splash 0.4s forwards;
+}
+
+body.light {
+  .checkbox-radio {
+    color: $primary-color;
+    border: 1px solid $gray-500;
+  }
+  .custom-checkbox.true > .checkbox-radio {
+    animation: splash 0.4s forwards;
+  }
+}
+
+body.dark {
+  .checkbox-radio {
+    color: $soft-color;
+    border: 1px solid $gray-800;
+  }
+  .custom-checkbox.true > .checkbox-radio {
+    animation: splashDark 0.4s forwards;
+  }
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+.text-field {
+  border: none;
+  // display: grid;
+  max-height: 60px;
+  transition: all 0.1s;
+  border: 1px solid $gray-400;
+  border-radius: $border-radius;
+  &.error {
+    margin-bottom: 15px;
+    border: 1px solid $danger-color;
+  }
+  &.true {
+    border: 2px solid $black;
+  }
+  &.true.error {
+    border: 2px solid $danger-color;
+  }
+  & .field-container {
+    width: 100%;
+    display: flex;
+
+    & .field-input {
+      flex: 1 1 auto;
+      padding-right: 1rem;
+    }
+
+    & .field-password {
+      bottom: 5px;
+      padding-left: 0;
+      position: relative;
+    }
+  }
+}
+
+.field-title {
+  padding: 0 5px;
+  margin: 0 10px;
+  font-size: $font-size-sm;
+  transition: $transition-base;
+}
+
+.field-input, .field-textarea {
+  // @include inputBasic();
+  height: 100%;
+  background: none;
+  box-shadow: none;
+  outline: none;
+  padding-top: 5px;
+  border: none;
+}
+
+.field-error {
+  color: $danger-color;
+}
+
+.field-error, .field-message {
+  height: 0;
+}
+
+body.light {
+  .field-input, .field-textarea {
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active
+    {
+      border-bottom: $border-width solid $border-color;
+      -webkit-box-shadow: 0 0 0 30px $gray-200 inset !important;
+    }
+  }
+  .text-field.true .field-input, .text-field.true .field-textarea {
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active
+    {
+      border-bottom: 2px solid $black;
+    }
+  }
+}
+
+body.dark {
+  .field-input, .field-textarea {
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active
+    {
+      -webkit-text-fill-color: $soft-color;
+      border-bottom: $border-width solid $gray-700;
+      -webkit-box-shadow: 0 0 0 30px darken($gray-900, 18%) inset !important;
+    }
+  }
+  .text-field.true .field-input, .text-field.true .field-textarea {
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active
+    {
+      border-bottom: 2px solid $gray-300;
+    }
+  }
+}
+
+body.light {
+  & .text-field {
+    background-color: $white;
+    &.true {
+      border: 2px solid $black;
+    }
+  }
+  & .field-input, .field-textarea {
+    @include inputBasic($primary-color, none, none);
+  }
+}
+
+body.dark {
+  & .text-field {
+    border: $border-width solid $gray-700;
+    background-color: darken($dark-bg, 4%);
+    &.true {
+      border: 2px solid $gray-300;
+    }
+  }
+  & .field-input, .field-textarea {
+    caret-color: $white;
+    @include inputBasic($soft-color, none, none);
+    &::placeholder {
+      color: $gray-400;
+    }
+  }
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
+.InputFile {
+  max-width: 375px;
+  transition: $transition-base;
+  &.error {
+    border: 1px solid $danger-color;
+  }
+  & .custom-checkbox {
+    justify-self: flex-end;
+  }
+  &.card.true {
+    border: 2px solid $success-color;
+  }
+}
+
+.InputFile--container {
+  & .form-label {
+    display: grid;
+    text-align: center;
+    & p {
+      align-self: center;
+      padding: 10px;
+    }
+    & p, input {
+      grid-row-start: 1;
+      grid-column-start: 1;
+    }
+    & p.single-line {
+      max-width: 280px;
+      justify-self: center;
+    }
+  }
+  & .form-label input[type='file'] {
+    opacity: 0;
+    cursor: pointer;
+  }
+  & .form-label, .InputFile--preview {
+    grid-row-start: 1;
+    grid-column-start: 1;
+  }
+}
+
+.InputFile--preview {
+  width: 100%;
+  height: 225px;
+  cursor: pointer;
+  justify-content: center;
+  border-radius: $border-radius;
+  border: 1px solid $border-color;
+  & img {
+    border-radius: $border-radius;
+  }
+  & .preview-icon {
+    font-size: 200px;
+    align-self: center;
+    color: $gray-400;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .InputFile {
+    max-width: 250px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .InputFile {
+    max-width: 400px;
+  }
+}
+

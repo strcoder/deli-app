@@ -1,0 +1,166 @@
+main,
+section,
+article,
+div,
+form,
+header,
+footer,
+ul,
+.grid {
+  display: grid;
+}
+
+nav,
+li,
+small,
+span,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+input,
+figure,
+i,
+.flex {
+  display: flex;
+}
+
+.flex-wrap { flex-wrap: wrap; }
+
+.justify-end { justify-content: flex-end; }
+.justify-center { justify-content: center; }
+.justify-start { justify-content: flex-start; }
+.justify-around { justify-content: space-around; }
+.justify-evenly { justify-content: space-evenly; }
+.justify-between { justify-content: space-between; }
+
+.justify-items-end { justify-items: flex-end; }
+.justify-items-center { justify-items: center; }
+.justify-items-stretch { justify-items: stretch; }
+.justify-items-start { justify-items: flex-start; }
+
+.justify-self-auto { justify-self: auto; }
+.justify-self-end { justify-self: flex-end; }
+.justify-self-center { justify-self: center; }
+.justify-self-stretch { justify-self: stretch; }
+.justify-self-start { justify-self: flex-start; }
+
+.content-end { align-content: flex-end; }
+.content-center { align-content: center; }
+.content-start { align-content: flex-start; }
+.content-around { align-content: space-around; }
+.content-evenly { align-content: space-evenly; }
+.content-between { align-content: space-between; }
+
+.items-end { align-items: flex-end; }
+.items-center { align-items: center; }
+.items-stretch { align-items: stretch; }
+.items-start { align-items: flex-start; }
+.items-baseline { align-items: baseline; }
+
+.self-auto { align-self: auto; }
+.self-end { align-self: flex-end; }
+.self-center { align-self: center; }
+.self-stretch { align-self: stretch; }
+.self-start { align-self: flex-start; }
+
+.place-content-end { place-content: end; }
+.place-content-start { place-content: start; }
+.place-content-center { place-content: center; }
+.place-content-stretch { place-content: stretch; }
+.place-content-evenly { place-content: space-evenly; }
+.place-content-around { place-content: space-around; }
+.place-content-between { place-content: space-between; }
+
+.place-items-end { place-items: end; }
+.place-items-start { place-items: start; }
+.place-items-center { place-items: center; }
+.place-items-stretch { place-items: stretch; }
+
+.place-self-end { place-self: end; }
+.place-self-auto { place-self: auto; }
+.place-self-start { place-self: start; }
+.place-self-center { place-self: center; }
+.place-self-stretch { place-self: stretch; }
+
+.m-4 { margin: 4px; }
+.m-5 { margin: 5px; }
+.m-8 { margin: 8px; }
+.m-10 { margin: 10px; }
+.m-12 { margin: 12px; }
+.m-15 { margin: 15px; }
+.m-16 { margin: 16px; }
+.m-20 { margin: 20px; }
+.m-24 { margin: 24px; }
+.m-25 { margin: 25px; }
+.m-50 { margin: 50px; }
+
+.p-4 { padding: 4px; }
+.p-5 { padding: 5px; }
+.p-8 { padding: 8px; }
+.p-10 { padding: 10px; }
+.p-12 { padding: 12px; }
+.p-15 { padding: 15px; }
+.p-16 { padding: 16px; }
+.p-20 { padding: 20px; }
+.p-24 { padding: 24px; }
+.p-25 { padding: 25px; }
+.p-50 { padding: 50px; }
+
+.gap-4 { gap: 4px; }
+.gap-5 { gap: 5px; }
+.gap-8 { gap: 8px; }
+.gap-10 { gap: 10px; }
+.gap-12 { gap: 12px; }
+.gap-15 { gap: 15px; }
+.gap-16 { gap: 16px; }
+.gap-20 { gap: 20px; }
+.gap-24 { gap: 24px; }
+.gap-25 { gap: 25px; }
+.gap-50 { gap: 50px; }
+
+.col-gap-4 { column-gap: 4px; }
+.col-gap-5 { column-gap: 5px; }
+.col-gap-8 { column-gap: 8px; }
+.col-gap-10 { column-gap: 10px; }
+.col-gap-12 { column-gap: 12px; }
+.col-gap-15 { column-gap: 15px; }
+.col-gap-16 { column-gap: 16px; }
+.col-gap-20 { column-gap: 20px; }
+.col-gap-24 { column-gap: 24px; }
+.col-gap-25 { column-gap: 25px; }
+.col-gap-50 { column-gap: 50px; }
+
+.row-gap-4 { row-gap: 4px; }
+.row-gap-5 { row-gap: 5px; }
+.row-gap-8 { row-gap: 8px; }
+.row-gap-10 { row-gap: 10px; }
+.row-gap-12 { row-gap: 12px; }
+.row-gap-15 { row-gap: 15px; }
+.row-gap-16 { row-gap: 16px; }
+.row-gap-20 { row-gap: 20px; }
+.row-gap-24 { row-gap: 24px; }
+.row-gap-25 { row-gap: 25px; }
+.row-gap-50 { row-gap: 50px; }
+
+.z {
+  &-message {
+    z-index: $message-z-index;
+  }
+
+  &-overlay {
+    z-index: $overlay-z-index;
+  }
+
+  &-modal {
+    z-index: $modal-z-index;
+  }
+
+  &-show {
+    z-index: $important-z-index;
+  }
+}

@@ -1,0 +1,276 @@
+a {
+  text-decoration: none;
+}
+
+button, a {
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 8px 14px;
+  text-align: center;
+  align-self: center;
+  align-items: center;
+  justify-self: center;
+  justify-content: center;
+  font-size: $font-size-base;
+  transition: $transition-base;
+  border-radius: $border-radius;
+  font-family: $font-family-base;
+  & .btn-icon {
+    font-size: $icon-size-xs;
+    transition: $transition-base;
+  }
+  &:hover { transform: translateY(-2px); }
+  &:active { transform: translateY(1px); }
+  & .btn-icon:nth-child(1) { padding-right: 5px; }
+  & .btn-icon:nth-child(2) { padding-left: 5px; }
+}
+
+.btn-white {
+  color: $secondary-color;
+  &:hover {
+    background-color: $gray-400;
+  }
+}
+
+.btn-outline-white {
+  &:hover {
+    color: $secondary-color;
+  }
+}
+
+
+.btn-disable,
+.btn-link-disable,
+.btn-pill-disable,
+.btn-circle-disable,
+.btn-outline-disable,
+.btn-pill-outline-disable,
+.btn-circle-outline-disable {
+  cursor: not-allowed;
+  &:hover, &:active, &:focus {
+    transform: none;
+    box-shadow: none;
+  }
+}
+
+.btn-outline-disable,
+.btn-pill-outline-disable,
+.btn-circle-outline-disable {
+  &:hover {
+    background: none;
+    color: $disable-color;
+  }
+}
+
+.btn-loading {
+  cursor: progress;
+  box-shadow: none;
+  color: $primary-color;
+  background-color: $gray-200;
+  border: $border-width solid $primary-color;
+  & .btn-icon {
+    padding: 0;
+    display: flex;
+    margin-right: 5px;
+  }
+  &:hover, &:active {
+    transform: none;
+    background: none;
+  }
+}
+
+.btn-avatar {
+  & > .btn-avatar-name {
+    padding-right: 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 135px;
+  }
+  & > .btn-avatar-img {
+    width: 25px;
+    height: 25px;
+    border-radius: $circle-radius;
+    background-color: $soft-color;
+  }
+  & > .btn-avatar-img img {
+    border-radius: $circle-radius;
+  }
+}
+
+.btn { @include button(); }
+.btn-link { @include buttonLink(); }
+.btn-pill { @include buttonPill(); }
+.btn-circle { @include buttonCircle(); }
+.btn-outline { @include buttonOutline(); }
+.btn-pill-outline { @include buttonOutlinePill(); }
+.btn-circle-outline { @include buttonCircleOutline(); }
+
+@each $name, $color in $shades-grey {
+  .btn-link-#{$name} {
+    @include buttonLink($color);
+  }
+}
+
+@each $name, $color in $text-white-shades-grey {
+  .btn-outline-#{$name} {
+    @include buttonOutline($color);
+  }
+  .btn-#{$name} {
+    @include button($soft-color, $color);
+  }
+  .btn-pill-#{$name} {
+    @include buttonPill($soft-color, $color);
+  }
+  .btn-circle-#{$name} {
+    @include buttonCircle($soft-color, $color);
+  }
+  .btn-pill-outline-#{$name} {
+    @include buttonOutlinePill($color, $soft-color);
+  }
+  .btn-circle-outline-#{$name} {
+    @include buttonCircleOutline($soft-color, $color);
+  }
+}
+
+@each $name, $color in $text-black-shades-grey {
+  .btn-outline-#{$name} {
+    @include buttonOutline($color, $black);
+  }
+  .btn-#{$name} {
+    @include button($black, $color);
+  }
+  .btn-pill-#{$name} {
+    @include buttonPill($black, $color);
+  }
+  .btn-circle-#{$name} {
+    @include buttonCircle($black, $color);
+  }
+  .btn-pill-outline-#{$name} {
+    @include buttonOutlinePill($color, $black);
+  }
+  .btn-circle-outline-#{$name} {
+    @include buttonCircleOutline($black, $color);
+  }
+}
+
+@each $name, $color in $generic-colors {
+  .btn-link-#{$name} {
+    @include buttonLink($color);
+  }
+}
+
+@each $name, $color in $text-white-generic-colors {
+  .btn-#{$name} {
+    @include button($soft-color, $color);
+  }
+  .btn-outline-#{$name} {
+    @include buttonOutline($color);
+  }
+  .btn-pill-#{$name} {
+    @include buttonPill($soft-color, $color);
+  }
+  .btn-pill-outline-#{$name} {
+    @include buttonOutlinePill($color, $soft-color);
+  }
+  .btn-circle-#{$name} {
+    @include buttonCircle($soft-color, $color);
+  }
+  .btn-circle-outline-#{$name} {
+    @include buttonCircleOutline($soft-color, $color);
+  }
+}
+
+@each $name, $color in $text-black-generic-colors {
+  .btn-#{$name} {
+    @include button($black, $color);
+  }
+  .btn-outline-#{$name} {
+    @include buttonOutline($color, $black);
+  }
+  .btn-pill-#{$name} {
+    @include buttonPill($black, $color);
+  }
+  .btn-pill-outline-#{$name} {
+    @include buttonOutlinePill($color, $black);
+  }
+  .btn-circle-#{$name} {
+    @include buttonCircle($black, $color);
+  }
+  .btn-circle-outline-#{$name} {
+    @include buttonCircleOutline($black, $color);
+  }
+}
+
+@each $name, $color in $brand-colors {
+  .btn-#{$name} {
+    @include button($soft-color, $color);
+  }
+  .btn-outline-#{$name} {
+    @include buttonOutline($color);
+  }
+  .btn-link-#{$name} {
+    @include buttonLink($color);
+  }
+  .btn-pill-#{$name} {
+    @include buttonPill($soft-color, $color);
+  }
+  .btn-pill-outline-#{$name} {
+    @include buttonOutlinePill($color, $soft-color);
+  }
+  .btn-circle-#{$name} {
+    @include buttonCircle($soft-color, $color);
+  }
+  .btn-circle-outline-#{$name} {
+    @include buttonCircleOutline($soft-color, $color);
+  }
+}
+
+@each $name, $color in $theme-color {
+  .btn-link-#{$name} {
+    @include buttonLink($color);
+  }
+}
+
+@each $name, $color in $text-white-brand-colors {
+  .btn-#{$name} {
+    @include button($soft-color, $color);
+  }
+  .btn-outline-#{$name} {
+    @include buttonOutline($color);
+  }
+  .btn-pill-#{$name} {
+    @include buttonPill($soft-color, $color);
+  }
+  .btn-pill-outline-#{$name} {
+    @include buttonOutlinePill($color, $soft-color);
+  }
+  .btn-circle-#{$name} {
+    @include buttonCircle($soft-color, $color);
+  }
+  .btn-circle-outline-#{$name} {
+    @include buttonCircleOutline($soft-color, $color);
+  }
+}
+
+@each $name, $color in $text-black-brand-colors {
+  .btn-#{$name} {
+    @include button($black, $color);
+  }
+  .btn-outline-#{$name} {
+    @include buttonOutline($color, $black);
+  }
+  .btn-pill-#{$name} {
+    @include buttonPill($black, $color);
+  }
+  .btn-pill-outline-#{$name} {
+    @include buttonOutlinePill($color, $black);
+  }
+  .btn-circle-#{$name} {
+    @include buttonCircle($black, $color);
+  }
+  .btn-circle-outline-#{$name} {
+    @include buttonCircleOutline($black, $color);
+  }
+}

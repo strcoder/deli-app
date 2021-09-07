@@ -1,0 +1,44 @@
+.SimpleCard {
+  display: block;
+
+  & > h4 {
+    padding: 10px;
+    background-color: $gray-200;
+    border-radius: $border-radius $border-radius 0 0;
+    border: $border-width solid $border-color;
+  }
+
+  &__body {
+    padding: 0.7rem;
+    background-color: $white;
+    border-radius: 0 0 $border-radius $border-radius;
+
+    & a {
+      text-align: left;
+      justify-content: left;
+      justify-self: left;
+    }
+  }
+}
+
+body.light {
+  & .SimpleCard > h4 {
+    background-color: $gray-200;
+    border: $border-width solid $border-color;
+  }
+  & .SimpleCard__body {
+    background-color: $white;
+    border: $border-width solid $border-color;
+  }
+}
+
+body.dark {
+  & .SimpleCard > h4 {
+    background-color: $dark-color-dark;
+    border: $border-width solid $border-color;
+  }
+  & .SimpleCard__body {
+    background-color: darken($dark-bg, 4%);
+    border: $border-width solid $border-color;
+  }
+}

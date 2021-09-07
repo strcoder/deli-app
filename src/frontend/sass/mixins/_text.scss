@@ -1,0 +1,15 @@
+@mixin textColor($color: $primary-color) {
+  color: $color;
+}
+
+// @each $name, $color in $colors-light-bg {
+//   .text-#{$name}.light { color: $color; }
+// }
+
+// @each $name, $color in $colors-dark-bg {
+//   .text-#{$name}.light { color: $color; }
+// }
+
+// @each $name, $color in $dark-bg-colors {
+//   .text-#{$name}.dark { color: $color; }
+// }

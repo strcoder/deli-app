@@ -1,0 +1,25 @@
+.Paginate {
+  display: flex;
+
+  &__page {
+    padding: 0.3rem 0.5rem;
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
+    border-radius: $border-radius;
+
+    &:hover {
+      background-color: $gray-400;
+    }
+
+    &--active {
+      opacity: 0.5;
+      color: $white;
+      cursor: not-allowed;
+      background-color: lighten($color: $secondary-color, $amount: 5%);
+
+      &:hover {
+        background-color: lighten($color: $secondary-color, $amount: 10%);
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+.Dropdown {
+  position: relative;
+  display: inline-block;
+
+  &__menu {
+    position: absolute;
+    top: calc(100% + 15px);
+    right: 0;
+    animation-duration: 0.5s;
+    min-width: 200px;
+    max-width: 300px;
+    width: max-content;
+    z-index: 30;
+    background-color: lighten($color: $gray, $amount: 44%);
+    border-radius: $border-radius;
+
+    &--option {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      padding-top: 0.4rem;
+      padding-bottom: 0.4rem;
+      cursor: pointer;
+      border-radius: $border-radius;
+      position: relative;
+
+      &:hover {
+        background-color: lighten($color: $gray, $amount: 40%);
+      }
+    }
+
+    &--option-active {
+      font-weight: 700;
+      color: $primary-color;
+
+      &::after {
+        content: '*';
+        position: absolute;
+        right: .7rem;
+        top: 55%;
+        transform: translateY(-50%);
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: -14px;
+      right: 0;
+      width: 0px;
+      height: 0px;
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
+      border-bottom: 15px solid lighten($color: $gray, $amount: 44%);
+    }
+  }
+}
+
+@media screen and (min-width: map-get($map: $breakpoints-width, $key: 'sm')) {
+  .Dropdown {
+    &__menu {
+      min-width: 300px;
+      max-width: 400px;
+    }
+  }
+}

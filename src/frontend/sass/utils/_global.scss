@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  animation-duration: $animate-duration;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  transition: $transition-theme;
+  font-family: $font-family-base;
+}
+
+body.light {
+  color: $dark-color;
+  background: $light-bg;
+}
+
+body.dark {
+  color: $soft-color;
+  background: $dark-bg;
+}
+
+.form-search {
+  @include formSearch();
+}
+
+.box-shadow { box-shadow: $box-shadow; }
+.box-shadow-sm { box-shadow: $box-shadow-sm; }
+.box-shadow-lg { box-shadow: $box-shadow-lg; }
+
+.fit-content {
+  max-width: fit-content;
+  max-height: fit-content;
+}
+
+.scroll-auto {
+  overflow: auto;
+  @include scroll();
+}

@@ -1,0 +1,42 @@
+.border {
+  &-thicker {
+    border: 2px solid darken($gray-color, 70%);
+  }
+
+  &-thick {
+    border: 1px solid darken($gray-color, 70%);
+  }
+
+  &-regular,
+  .border {
+    border: 1px solid $gray-color;
+  }
+
+  &-thin {
+    border: 1px solid lighten($gray-color, 70%);
+  }
+
+  &-thinner {
+    border: 0.5px solid lighten($gray-color, 70%);
+  }
+
+  &-top {
+    border-width: 1px 0 0 0;
+  }
+
+  &-bottom {
+    border-width: 0 0 1px 0;
+  }
+
+  &-right {
+    border-width: 0 1px 0 0;
+  }
+
+  &-left {
+    border-width: 0 0 0 1px;
+  }
+
+  &-none {
+    border: none;
+  }
+}

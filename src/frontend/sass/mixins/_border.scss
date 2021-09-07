@@ -1,0 +1,19 @@
+@mixin border($color) {
+  border: 1px solid $color;
+}
+
+@mixin borderThicker($color) {
+  border: 2px solid darken($color, 70%);
+}
+
+@mixin borderThick($color) {
+  border: 1px solid darken($color, 70%);
+}
+
+@mixin borderThin($color) {
+  border: 1px solid lighten($color, 70%);
+}
+
+@mixin borderThinner($color) {
+  border: 0.5px solid lighten($color, 70%);
+}

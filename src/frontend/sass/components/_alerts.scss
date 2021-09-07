@@ -1,0 +1,147 @@
+.AlertsContainer {
+  position: fixed;
+  z-index: $message-z-index;
+
+  /* En moviles es mejor siempre mostrar los anuncios arriba */
+  &__top-right {
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__top-left {
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__bottom-left {
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__bottom-right {
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.Alert {
+  display: flex;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 1rem;
+  padding: 0.5rem 0.8rem;
+  animation-duration: 800ms;
+  background-color: $gray-300;
+  min-width: calc(100vw - 70px);
+  max-width: calc(100vw - 70px);
+  border-radius: $border-radius;
+
+  &:hover {
+    background-color: $gray-400;
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    padding-right: 0.5rem;
+    justify-content: center;
+
+    & > svg {
+      width: 25px;
+      height: 25px;
+    }
+
+    &--info {
+      color: $tertiary-color;
+    }
+
+    &--error {
+      color: $danger-color;
+    }
+  }
+
+  &__content {
+    flex: 1 1 auto;
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+
+    & > h6 {
+      font-size: $font-size-md;
+    }
+
+    & > p {
+      font-size: $font-size-sm;
+    }
+  }
+
+  &__info {
+    color: $tertiary-color;
+    background-color: lighten($tertiary-color, 85%);
+  }
+
+  &__error {
+    color: $danger-color;
+    background-color: lighten($danger-color, 65%);
+  }
+
+  &__progress {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 4px;
+    width: 100%;
+    position: absolute;
+    transform-origin: left;
+    animation-timing-function: linear;
+
+    &--info {
+      background-color: $tertiary-color;
+    }
+
+    &--error {
+      background-color: $danger-color;
+    }
+  }
+}
+
+@media screen and (min-width: map-get($map: $breakpoints-width, $key: 'sm')) {
+  .AlertsContainer {
+    &__top-right {
+      top: 1rem;
+      left: auto;
+      right: 1rem;
+      transform: none;
+    }
+
+    &__top-left {
+      top: 1rem;
+      left: 1rem;
+      transform: none;
+    }
+
+    &__bottom-left {
+      top: auto;
+      left: 1rem;
+      bottom: 1rem;
+      transform: none;
+    }
+
+    &__bottom-right {
+      top: auto;
+      left: auto;
+      right: 1rem;
+      bottom: 1rem;
+      transform: none;
+    }
+  }
+
+  .Alert {
+    min-width: 240px;
+    max-width: 350px;
+  }
+}
