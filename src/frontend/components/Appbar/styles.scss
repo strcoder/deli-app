@@ -1,0 +1,130 @@
+@import '../../sass/utils/variables';
+
+.Appbar {
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  position: fixed;
+  place-items: center;
+  background-color: $white;
+  box-shadow: $box-shadow-sm;
+  grid-template-columns: 1fr 0.6fr;
+}
+
+.Appbar__links {
+  display: flex;
+  overflow: auto;
+  max-width: 100vw;
+  grid-row-start: 2;
+  grid-column-end: span 2;
+  & a.active {
+    color: $primary-color;
+    text-decoration: underline;
+  }
+}
+
+.Appbar__user {
+  grid-row-start: 1;
+  grid-column-start: 2;
+  & a {
+    color: $accent-color;
+  }
+  & button.btn-link-accent {
+    & span:not(.btn-icon) {
+      display: none;
+    }
+    &::before {
+      top: -8px;
+      content: '';
+      width: 12px;
+      height: 12px;
+      right: -25px;
+      position: relative;
+      border-radius: $circle-radius;
+      background-color: $tertiary-color;
+    }
+  }
+  & a:last-child {
+    box-shadow: none;
+    margin-left: 10px;
+    padding-right: 4px;
+    color: $primary-color;
+    background-color: rgba($primary-color, 0.2);
+  }
+  & a:last-child:active, & a:last-child:focus {
+    box-shadow: 0 0 0 0.2em rgba($primary-color, 0.5);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .Appbar {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .Appbar__links {
+    grid-row-start: 1;
+    grid-column-start: 2;
+    grid-column-end: span 1;
+  }
+  .Appbar__user {
+    grid-column-start: 3;
+  }
+}
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+.Appbar__cart {
+  top: 50px;
+  right: 22%;
+  z-index: 10;
+  width: 200px;
+  height: 250px;
+  position: fixed;
+  background-color: $white;
+  align-content: flex-start;
+  box-shadow: $box-shadow-sm;
+  border-radius: $border-radius;
+  border: $border-width solid $border-color;
+}
+
+.CardCard__image {
+  width: 50px;
+  height: 50px;
+  border-radius: $circle-radius;
+  & img {
+    object-fit: cover;
+    border-radius: $circle-radius;
+  }
+}
+
+.CardCard--min {
+  row-gap: 4px;
+  padding: 10px;
+  column-gap: 10px;
+  align-items: center;
+  font-size: $font-size-sm;
+  background-color: $gray-300;
+  grid-template-columns: auto 1fr;
+  border: $border-width solid $border-color;
+  & figure {
+    grid-row-end: span 2;
+  }
+  & p {
+    max-width: 110px;
+  }
+  & p strong {
+    color: $tertiary-color;
+  }
+}
+
+.Appbar__cart--close {
+  top: 0;
+  left: 0;
+  z-index: 9;
+  width: 100%;
+  height: 100%;
+  color: $white;
+  position: fixed;
+  background-color: rgba($black, 0.2);
+}

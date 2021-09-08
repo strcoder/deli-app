@@ -1,0 +1,69 @@
+@import '../../sass/utils/variables';
+
+.Footer {
+  gap: 20px;
+  padding: 20px;
+}
+
+.Footer__head {
+  & nav {
+    padding: 20px 0;
+  }
+  & nav a {
+    font-size: $font-size-lg;
+  }
+  & nav a:first-child {
+    padding-left: 0;
+  }
+}
+
+.Footer__container {
+  justify-content: center;
+  align-content: flex-start;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.Footer__container--links {
+  gap: 8px;
+  display: grid;
+  align-content: flex-start;
+  & a {
+    padding: 0;
+    text-align: left;
+    color: $gray-700;
+    justify-self: flex-start;
+    font-weight: $font-weight-normal;
+  }
+  &:nth-child(3) {
+    grid-column-end: span 2;
+  }
+}
+
+.Footer__copy {
+  display: flex;
+  color: $gray-700;
+  align-items: center;
+  justify-self: center;
+}
+
+@media screen and (min-width: 768px) {
+  .Footer {
+    padding: 25px 20%;
+  }
+
+  .Footer__container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .Footer__container--links {
+    &:nth-child(3) {
+      grid-column-end: span 1;
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .Footer {
+    padding: 25px 30%;
+  }
+}
