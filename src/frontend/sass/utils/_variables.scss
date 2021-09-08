@@ -27,13 +27,13 @@ $gray-900: #424953;
 //* Color scheme: Light *//
 // $light-bg: #f4f7f9;
 $light-bg: #fafbfe;
-$primary-color: #A7612C;
-$secondary-color: #A74E4E;
-$tertiary-color: #8F4969;
-$accent-color: #694C74;
-$success-color: #434D6D;
-$warning-color: #2F4858;
-$danger-color: #731632;
+$primary-color: #560216;
+$secondary-color: #561233;
+$tertiary-color: #00ADBA;
+$accent-color: #04245C;
+$success-color: #193490;
+$warning-color: #D780C9;
+$danger-color: #FD5369;
 $dark-color: #131618;
 $gray-color: #A6ABBD;
 $grey-color: #727787;
@@ -88,10 +88,10 @@ $border-width-lg: 0.25rem;
 $border-width-xl: 0.375rem;
 $border-color-white: $white;
 $border-color: #bbc1d33f;
-$border-radius: 0.2rem;
-$border-radius-xl: 0.6rem;
-$border-radius-lg: 0.4rem;
-$border-radius-md: 0.2rem;
+$border-radius: 0.25rem;
+$border-radius-xl: 1.00rem;
+$border-radius-lg: 0.5rem;
+$border-radius-md: 0.25rem;
 $border-radius-sm: 0.1rem;
 $border-radius-pill: 2rem;
 $circle-radius: 50%;
@@ -106,8 +106,8 @@ $transition-collapse: height 0.35s ease;
 $transition-tabs: all 0.2s;
 
 //* Fonts *//
-$font-family-base: 'Nunito', sans-serif;
-$font-family-headers: 'Montserrat', sans-serif;
+$font-family-base: 'Urbanist', sans-serif;
+$font-family-headers: 'Glory', sans-serif;
 $font-size-base: 1rem;
 $font-size-xxl: ($font-size-base * 2);
 $font-size-xl: ($font-size-base * 1.5);
@@ -295,6 +295,7 @@ $text-white-brand-colors: map-merge(
     'primary': $primary-color,
     'tertiary': $tertiary-color,
     'secondary': $secondary-color,
+    'accent': $accent-color,
   ),
   $text-white-brand-colors
 );
@@ -305,7 +306,6 @@ $text-black-brand-colors: map-merge(
   (
     'gray': $gray-color,
     'soft': $soft-color,
-    'accent': $accent-color,
   ),
   $text-black-brand-colors
 );

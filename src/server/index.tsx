@@ -32,7 +32,7 @@ const setResponse = (html: string, preloadedState: ContextInterface, helmet: Hel
       <head>
         <base href="/" />
         <meta charset="utf-8" />
-        <meta name="theme-color" content="#A7612C" />
+        <meta name="theme-color" content="#EA9B15" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         ${helmet.title?.toString()}
@@ -41,8 +41,9 @@ const setResponse = (html: string, preloadedState: ContextInterface, helmet: Hel
         ${helmet.base?.toString()?.split('/>').join('/>\n\t\t')}
         <link rel='shortcut icon' href='/logo-min-white.svg' type='image/svg' />
         <link rel='apple-touch-icon' href='/logo-min-white.svg' />
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Nunito:wght@200;300;400;600;700;800;900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Glory:wght@100;200;300;400&family=Urbanist:wght@100;200;300;400;500&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="app.css" />
         ${helmet.style?.toString()?.split('</style>').join('</style>\n\t\t')}
         ${helmet.script?.toString()?.split('</script>').join('</script>\n\t\t')}

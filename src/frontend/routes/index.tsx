@@ -4,6 +4,7 @@ import Home from '../pages/Home';
 import Layout from '../containers/Layout';
 import { useStateValue } from '../context';
 import NotFound from '../pages/NotFound';
+import Commerce from '../pages/Commerce';
 
 const RoutesStudent = () => {
   const { theme } = useStateValue();
@@ -18,6 +19,7 @@ const RoutesStudent = () => {
       <Layout>
         <Switch>
           <Route exact path={['/', '/home']} component={Home} />
+          <Route exact path='/commerce' component={Commerce} />
           <Route component={NotFound} />
         </Switch>
       </Layout>

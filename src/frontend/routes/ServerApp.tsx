@@ -3,6 +3,7 @@ import { renderRoutes } from 'react-router-config';
 import Home from '../pages/Home';
 import Layout from '../containers/Layout';
 import NotFound from '../pages/NotFound';
+import Commerce from '../pages/Commerce';
 
 const serverRoutes = () => {
   return [
@@ -10,6 +11,11 @@ const serverRoutes = () => {
       exact: true,
       component: Home,
       path: ['/', '/home'],
+    },
+    {
+      exact: true,
+      path: '/commerce',
+      component: Commerce,
     },
     {
       name: 'NotFound',
