@@ -1,0 +1,141 @@
+@import '../../sass/utils/variables';
+
+.ProductDetail {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ProductDetail__figure {
+  width: 250px;
+  margin: 0 2px;
+}
+
+.ProductDetail__figure img {
+  width: 125%;
+  padding: 20px;
+  border-radius: 50px;
+  margin: 0 auto;
+}
+
+.ProductDetail__Stats {
+  margin: 0 auto;
+  padding: 10px;
+  width: auto;
+}
+
+.ProductDetail__Stats--Name {
+  font-weight: bold;
+  font-size: x-large;
+}
+
+.ProductDetail__Stats--Local {
+  color: $disable-color;
+  padding: 5px;
+  font-weight: bold;
+}
+
+.ProductDetail__Stats--Rec {
+  font-weight: 700;
+  font-size: large;
+  padding: 5px;
+}
+
+.ProductDetail__Stats--Calif {
+  padding: 5px;
+}
+
+.ProductDetail__Stats--Recom {
+  padding: 5px;
+}
+
+.ProductDetail__interactive {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: 5px;
+}
+
+.ProductDetail__btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ProductDetail__AgregarCarrito {
+  font-size: smaller;
+  width: 40%;
+  margin: 15px;
+  border-radius: 10px;
+  background-color: #4B9B96;
+  color: white;
+}
+
+.ProductDetail__interactive--cuantity {
+  padding: 2px;
+  text-align: center;
+}
+
+.ProductDetail__btns--add {
+  padding: 10px;
+  margin: 5px;
+  background-color: #4B9B96;
+  color: white;
+
+}
+
+.ProductDetail__btns--rest {
+  padding: 10px;
+  margin: 5px;
+  color: white;
+  background-color: #4B9B96;
+}
+
+@media (min-width: 375px) {
+  .ProductDetail__figure img {
+    width: 150%;
+    padding: 20px;
+    border-radius: 50px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 425px) {
+  .ProductDetail__figure img {
+    width: 165%;
+    padding: 25px;
+    border-radius: 50px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .ProductDetail {
+    display: flex;
+  }
+
+  .ProductDetail__figure {
+    width: 200px;
+  }
+
+
+  .ProductDetail__figure img {
+    width: 115%;
+    padding: 25px;
+    border-radius: 50px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .ProductDetail__figure {
+    width: 230px;
+  }
+
+
+  .ProductDetail__figure img {
+    width: 113%;
+    padding: 25px;
+    border-radius: 50px;
+  }
+}
