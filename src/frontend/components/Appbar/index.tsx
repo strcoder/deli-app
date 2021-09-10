@@ -188,6 +188,7 @@ const Appbar = () => {
               <TextField
                 id='Email'
                 name='email'
+                type='email'
                 label='Correo'
                 placeholder='Digita tu correo electronico'
                 register={() => {}}
@@ -195,6 +196,7 @@ const Appbar = () => {
               <TextField
                 id='Password'
                 name='password'
+                type='password'
                 label='Contraseña'
                 placeholder='Digita tu contraseña'
                 register={() => {}}
@@ -234,11 +236,13 @@ const Appbar = () => {
               <TextField
                 id='Email'
                 name='email'
+                type='email'
                 label='Correo'
                 placeholder='Digita tu correo electronico'
                 register={() => {}}
               />
               <TextField
+                type='number'
                 id='Telephone'
                 name='telephone'
                 label='Número telefonico'
@@ -248,6 +252,7 @@ const Appbar = () => {
               <TextField
                 id='Password'
                 name='password'
+                type='password'
                 label='Contraseña'
                 placeholder='Digita tu contraseña'
                 register={() => {}}
