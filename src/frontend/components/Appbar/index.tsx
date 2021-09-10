@@ -7,9 +7,13 @@ import { FaTimes, FaMinus, FaPlus } from 'react-icons/fa';
 import { AiOutlineHome, AiOutlineShop } from 'react-icons/ai';
 import { IoLogInOutline, IoFastFoodOutline } from 'react-icons/io5';
 import './styles.scss';
+import Modal from '../Modal';
+import TextField from '../form/TextField';
 
 const Appbar = () => {
   const [openCart, setOpenCart] = useState(false);
+  const [openModal, setOpenModal] = useState(false);
+  const [register, setRegister] = useState(false);
   const [count, setCount] = useState(1);
   const price = 20;
 
@@ -83,6 +87,7 @@ const Appbar = () => {
           type='button'
           title='Entrar'
           className='Appbar__user--enter'
+          onClick={() => setOpenModal(true)}
         >
           <span>Entrar</span>
           <span className='btn-icon'><IoLogInOutline /></span>
@@ -171,6 +176,99 @@ const Appbar = () => {
           </div>
         </div>
       )}
+      <Modal
+        title='¡Bienvenido a Deli-app!'
+        show={openModal}
+        onClose={setOpenModal}
+      >
+        <>
+          {!register && (
+            <form className='Appbar__modal gap-20'>
+              <p><strong>Iniciar sesión</strong></p>
+              <TextField
+                id='Email'
+                name='email'
+                label='Correo'
+                placeholder='Digita tu correo electronico'
+                register={() => {}}
+              />
+              <TextField
+                id='Password'
+                name='password'
+                label='Contraseña'
+                placeholder='Digita tu contraseña'
+                register={() => {}}
+              />
+              <button
+                type='submit'
+                className='btn-primary form-button'
+              >
+                Iniciar sesión
+              </button>
+              <button
+                type='button'
+                onClick={() => setRegister(true)}
+                className='btn-link-tertiary form-button'
+              >
+                ¿No tienes cuenta?
+              </button>
+            </form>
+          )}
+          {register && (
+            <form className='Appbar__modal register gap-10'>
+              <p><strong>Registrate</strong></p>
+              <TextField
+                id='Name'
+                name='name'
+                label='Nombre'
+                placeholder='Digita tu nombre'
+                register={() => {}}
+              />
+              <TextField
+                id='Lastname'
+                name='lastname'
+                label='Apellidos'
+                placeholder='Digita tu apellidos'
+                register={() => {}}
+              />
+              <TextField
+                id='Email'
+                name='email'
+                label='Correo'
+                placeholder='Digita tu correo electronico'
+                register={() => {}}
+              />
+              <TextField
+                id='Telephone'
+                name='telephone'
+                label='Número telefonico'
+                placeholder='55 1234-5678'
+                register={() => {}}
+              />
+              <TextField
+                id='Password'
+                name='password'
+                label='Contraseña'
+                placeholder='Digita tu contraseña'
+                register={() => {}}
+              />
+              <button
+                type='submit'
+                className='btn-primary form-button'
+              >
+                Registrate
+              </button>
+              <button
+                type='button'
+                onClick={() => setRegister(false)}
+                className='btn-link-tertiary form-button'
+              >
+                ¿Ya tienes cuenta?
+              </button>
+            </form>
+          )}
+        </>
+      </Modal>
     </header>
   );
 };

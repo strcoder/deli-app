@@ -63,32 +63,44 @@
   }
 }
 
-body.light {
-  .form-input,
-  .form-textarea,
-  .form-select {
-    @include inputBasic($primary-color, $white, $border-color);
-  }
+.form-input,
+.form-textarea,
+.form-select {
+  @include inputBasic($primary-color, $white, $border-color);
+}
 
-  .form-select {
-    &:active, &:focus {
-      border: 2px solid $black;
-    }
+.form-select {
+  &:active, &:focus {
+    border: 2px solid $black;
   }
 }
 
-body.dark {
-  .form-input,
-  .form-textarea,
-  .form-select {
-    @include inputBasic($soft-color, darken($dark-bg, 4%), $gray-700);
-  }
-  .form-select {
-    &:active, &:focus {
-      border: 2px solid $white;
-    }
-  }
-}
+// body.light {
+//   .form-input,
+//   .form-textarea,
+//   .form-select {
+//     @include inputBasic($primary-color, $white, $border-color);
+//   }
+
+//   .form-select {
+//     &:active, &:focus {
+//       border: 2px solid $black;
+//     }
+//   }
+// }
+
+// body.dark {
+//   .form-input,
+//   .form-textarea,
+//   .form-select {
+//     @include inputBasic($soft-color, darken($dark-bg, 4%), $gray-700);
+//   }
+//   .form-select {
+//     &:active, &:focus {
+//       border: 2px solid $white;
+//     }
+//   }
+// }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -248,34 +260,44 @@ body.dark {
   }
 }
 
-body.light {
-  & .text-field {
-    background-color: $white;
-    &.true {
-      border: 2px solid $black;
-    }
+.text-field {
+  background-color: $white;
+  &.true {
+    border: 2px solid $black;
   }
-  & .field-input, .field-textarea {
-    @include inputBasic($primary-color, none, none);
-  }
+}
+.field-input, .field-textarea {
+  @include inputBasic($primary-color, none, none);
 }
 
-body.dark {
-  & .text-field {
-    border: $border-width solid $gray-700;
-    background-color: darken($dark-bg, 4%);
-    &.true {
-      border: 2px solid $gray-300;
-    }
-  }
-  & .field-input, .field-textarea {
-    caret-color: $white;
-    @include inputBasic($soft-color, none, none);
-    &::placeholder {
-      color: $gray-400;
-    }
-  }
-}
+// body.light {
+//   & .text-field {
+//     background-color: $white;
+//     &.true {
+//       border: 2px solid $black;
+//     }
+//   }
+//   & .field-input, .field-textarea {
+//     @include inputBasic($primary-color, none, none);
+//   }
+// }
+
+// body.dark {
+//   & .text-field {
+//     border: $border-width solid $gray-700;
+//     background-color: darken($dark-bg, 4%);
+//     &.true {
+//       border: 2px solid $gray-300;
+//     }
+//   }
+//   & .field-input, .field-textarea {
+//     caret-color: $white;
+//     @include inputBasic($soft-color, none, none);
+//     &::placeholder {
+//       color: $gray-400;
+//     }
+//   }
+// }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
