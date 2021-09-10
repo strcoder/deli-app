@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer className='Footer'>
       <div className='Footer__head'>
-        <h1>Foody+</h1>
+        <h1>Deli-app</h1>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta quidem dolores quas voluptate, modi et! Perspiciatis quos illum ut saepe nulla nihil doloribus quae magnam, beatae, placeat ex blanditiis atque.</p>
         <nav>
           <Link to='/social-media/facebook' title='Facebook' className='btn-link-facebook'>
@@ -24,7 +24,7 @@ const Footer = () => {
           </Link>
         </nav>
       </div>
-      <div className='Footer__container'>
+      {/* <div className='Footer__container'>
         <nav className='Footer__container--links'>
           <p><strong>Recetas</strong></p>
           <Link to='/'>Desayunos</Link>
@@ -47,10 +47,12 @@ const Footer = () => {
           <Link to='/'>Contact</Link>
           <Link to='/'>Partners</Link>
         </nav>
-      </div>
+      </div> */}
       <div className='Footer__copy'>
-        <p>&reg;Foody+</p>
-        <Link to='/'>Privacy & Terms</Link>
+        <p>&reg;Deli-app</p>
+        <Link to='/terms-conditions' className='btn-link-black'>
+          Privacy & Terms
+        </Link>
       </div>
     </footer>
   );
