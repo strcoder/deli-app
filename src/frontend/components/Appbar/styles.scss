@@ -75,17 +75,31 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////
 
 .Appbar__cart {
-  top: 50px;
-  right: 22%;
+  top: 0;
+  right: 0;
   z-index: 10;
-  width: 200px;
-  height: 250px;
+  width: 300px;
+  height: 100%;
   position: fixed;
   background-color: $white;
   align-content: flex-start;
   box-shadow: $box-shadow-sm;
   border-radius: $border-radius;
+  grid-template-rows: auto 1fr auto;
   border: $border-width solid $border-color;
+  box-shadow: 0 0 0 0.2em rgba($white, 0.5);
+}
+
+.Appbar__cart--header {
+  padding: 0 10px;
+}
+
+.Appbar__cart--footer {
+  background-color: $gray-200;
+  border: $border-width solid $border-color;
+  & a {
+    padding: 12px;
+  }
 }
 
 .CardCard__image {
@@ -111,10 +125,13 @@
     grid-row-end: span 2;
   }
   & p {
-    max-width: 110px;
+    max-width: 160px;
   }
   & p strong {
     color: $tertiary-color;
+  }
+  & .flex p:nth-child(2) {
+    padding: 0 5px;
   }
 }
 
