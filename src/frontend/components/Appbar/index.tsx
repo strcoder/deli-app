@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { FiTrash } from 'react-icons/fi';
-import { HiChevronRight } from 'react-icons/hi';
+import { HiOutlineLightBulb } from 'react-icons/hi';
 import { RiShoppingCartLine } from 'react-icons/ri';
 import { FaTimes, FaMinus, FaPlus } from 'react-icons/fa';
+import { AiOutlineHome, AiOutlineShop } from 'react-icons/ai';
+import { IoLogInOutline, IoFastFoodOutline } from 'react-icons/io5';
 import './styles.scss';
 
 const Appbar = () => {
@@ -27,7 +29,8 @@ const Appbar = () => {
           activeClassName='active'
           className='btn-link-gray-700'
         >
-          Home
+          <span className='btn-icon'><AiOutlineHome /></span>
+          <span>Home</span>
         </NavLink>
         <NavLink
           exact
@@ -35,7 +38,8 @@ const Appbar = () => {
           activeClassName='active'
           className='btn-link-gray-700'
         >
-          Commerces
+          <span className='btn-icon'><AiOutlineShop /></span>
+          <span>Commerces</span>
         </NavLink>
         <NavLink
           exact
@@ -43,7 +47,8 @@ const Appbar = () => {
           activeClassName='active'
           className='btn-link-gray-700'
         >
-          Foods
+          <span className='btn-icon'><IoFastFoodOutline /></span>
+          <span>Foods</span>
         </NavLink>
         <NavLink
           exact
@@ -51,7 +56,8 @@ const Appbar = () => {
           activeClassName='active'
           className='btn-link-gray-700'
         >
-          Offer
+          <span className='btn-icon'><HiOutlineLightBulb /></span>
+          <span>Offer</span>
         </NavLink>
       </nav>
       <div className='Appbar__user flex'>
@@ -73,18 +79,28 @@ const Appbar = () => {
           <span className='btn-icon'><RiShoppingCartLine /></span>
           <span>Carrito</span>
         </button>
-        <Link to='/login' className='btn-outline-accent'>
-          <span>Login</span>
-        </Link>
-        <Link to='/register'>
-          <span>Register</span>
-          <span className='btn-icon'><HiChevronRight /></span>
-        </Link>
+        <button
+          type='button'
+          title='Entrar'
+          className='Appbar__user--enter'
+        >
+          <span>Entrar</span>
+          <span className='btn-icon'><IoLogInOutline /></span>
+        </button>
       </div>
       {openCart && (
         <div className='Appbar__cart bounceInRight'>
           <div className='Appbar__cart--header flex items-center justify-between'>
-            <p><strong>Carrito (3)</strong></p>
+            <div className='flex items-center'>
+              <button
+                type='button'
+                className='btn-link-gray'
+                onClick={() => setOpenCart(false)}
+              >
+                <FaTimes />
+              </button>
+              <p><strong>Carrito (3)</strong></p>
+            </div>
             <button
               type='button'
               title='Vaciar carrito'

@@ -32,7 +32,7 @@ const setResponse = (html: string, preloadedState: ContextInterface, helmet: Hel
       <head>
         <base href="/" />
         <meta charset="utf-8" />
-        <meta name="theme-color" content="#EA9B15" />
+        <meta name="theme-color" content="#560216" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         ${helmet.title?.toString()}
