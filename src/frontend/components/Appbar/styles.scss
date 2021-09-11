@@ -215,7 +215,20 @@
     color: $tertiary-color;
   }
   & .flex p:nth-child(2) {
-    padding: 0 5px;
+    display: flex;
+    width: 25px;
+    padding: 5px;
+    font-weight: bold;
+    justify-content: center;
+  }
+  & .flex .btn-primary {
+    padding: 8px;
+    font-size: 12px;
+    box-shadow: none;
+  }
+  & .flex .btn-primary:first-child {
+    color: $primary-color;
+    background-color: rgba($primary-color, 0.1);
   }
 }
 

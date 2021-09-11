@@ -1,0 +1,47 @@
+@import '../../sass/utils/variables';
+
+.CommerceCard {
+  padding: 0;
+  display: grid;
+  min-width: 250px;
+  background-color: $white;
+  border-radius: $border-radius-lg;
+  border: $border-width solid $border-color;
+}
+
+.CommerceCard__header {
+  width: 250px;
+  display: grid;
+  height: 170px;
+  & img {
+    height: 170px;
+    grid-row-start: 1;
+    object-fit: cover;
+    grid-column-start: 1;
+    border-radius: $border-radius-lg;
+  }
+  & span {
+    grid-row-start: 1;
+    grid-column-start: 1;
+    color: $warning-color;
+    justify-self: flex-end;
+    font-size: $font-size-xxl;
+  }
+}
+
+.CommerceCard__body {
+  gap: 12px;
+  color: $black;
+  padding: 10px;
+  & p {
+    max-width: 225px;
+    display: flex;
+    align-items: center;
+  }
+  & p:last-child {
+    font-weight: normal;
+  }
+  & p span:first-child {
+    padding-right: 5px;
+  }
+}

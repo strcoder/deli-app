@@ -38,7 +38,7 @@ const Appbar = () => {
         </NavLink>
         <NavLink
           exact
-          to='/projects'
+          to='/commerces'
           activeClassName='active'
           className='btn-link-gray-700'
         >
@@ -47,7 +47,7 @@ const Appbar = () => {
         </NavLink>
         <NavLink
           exact
-          to='/services'
+          to='/food'
           activeClassName='active'
           className='btn-link-gray-700'
         >
@@ -56,12 +56,12 @@ const Appbar = () => {
         </NavLink>
         <NavLink
           exact
-          to='/company'
+          to='/orders'
           activeClassName='active'
           className='btn-link-gray-700'
         >
           <span className='btn-icon'><HiOutlineLightBulb /></span>
-          <span>Offer</span>
+          <span>Orders</span>
         </NavLink>
       </nav>
       <div className='Appbar__user flex'>
@@ -138,7 +138,7 @@ const Appbar = () => {
                       type='button'
                       title='Remover'
                       disabled={count <= 1}
-                      className='btn-link-gray'
+                      className='btn-primary'
                       onClick={() => setCount(count - 1)}
                     >
                       <FaMinus />
@@ -147,7 +147,7 @@ const Appbar = () => {
                     <button
                       type='button'
                       title='Agreagar'
-                      className='btn-link-accent'
+                      className='btn-primary'
                       onClick={() => setCount(count + 1)}
                     >
                       <FaPlus />
