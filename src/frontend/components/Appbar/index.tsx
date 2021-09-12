@@ -6,9 +6,9 @@ import { RiShoppingCartLine } from 'react-icons/ri';
 import { FaTimes, FaMinus, FaPlus } from 'react-icons/fa';
 import { AiOutlineHome, AiOutlineShop } from 'react-icons/ai';
 import { IoLogInOutline, IoFastFoodOutline } from 'react-icons/io5';
-import './styles.scss';
 import Modal from '../Modal';
 import TextField from '../form/TextField';
+import './styles.scss';
 
 const Appbar = () => {
   const [openCart, setOpenCart] = useState(false);
@@ -22,7 +22,7 @@ const Appbar = () => {
       <section className='Appbar__logo'>
         <Link to='/'>
           <figure>
-            <h1 className='color-accent'>Deli-app</h1>
+            <p className='color-accent txt-xl'><strong>Deli-app</strong></p>
           </figure>
         </Link>
       </section>

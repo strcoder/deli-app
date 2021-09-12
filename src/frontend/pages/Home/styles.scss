@@ -62,3 +62,12 @@
   padding: 10px 0;
   grid-template-columns: repeat(6, 1fr);
 }
+
+.Home__latest {
+  padding: 25px;
+}
+
+.Home__latest--list {
+  gap: 15px;
+  padding-top: 10px;
+}

@@ -3,6 +3,7 @@ import { HiDotsHorizontal } from 'react-icons/hi';
 import { IoSearchOutline, IoArrowForwardOutline } from 'react-icons/io5';
 import CommerceCard from '../../components/CommerceCard';
 import TextField from '../../components/form/TextField';
+import OrderCard from '../../components/OrderCard';
 import './styles.scss';
 
 const images = [
@@ -11,6 +12,24 @@ const images = [
   'https://images.pexels.com/photos/4551907/pexels-photo-4551907.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
   'https://images.pexels.com/photos/1114620/pexels-photo-1114620.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
   'https://images.pexels.com/photos/5779365/pexels-photo-5779365.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
+];
+
+const orders = [
+  {
+    total: 100,
+    status: 'active',
+    image: 'https://images.pexels.com/photos/4725659/pexels-photo-4725659.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+  },
+  {
+    total: 250,
+    status: 'delivered',
+    image: 'https://images.pexels.com/photos/1600711/pexels-photo-1600711.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+  },
+  {
+    total: 50,
+    status: 'delivered',
+    image: 'https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+  },
 ];
 
 const Home = () => {
@@ -59,6 +78,29 @@ const Home = () => {
           ))}
         </div>
       </main>
+
+      <section className='Home__latest'>
+        <div className='flex justify-between items-center'>
+          <p><strong>Tus ultimos pedidos</strong></p>
+          <button
+            type='button'
+            className='btn-link-gray txt-lg'
+          >
+            <HiDotsHorizontal />
+          </button>
+        </div>
+        <div className='Home__latest--list'>
+          {orders.map((item) => (
+            <React.Fragment key={`Orders-${item.total}`}>
+              <OrderCard
+                image={item.image}
+                total={item.total}
+                status={item.status}
+              />
+            </React.Fragment>
+          ))}
+        </div>
+      </section>
     </section>
   );
 };

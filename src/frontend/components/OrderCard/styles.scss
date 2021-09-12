@@ -1,0 +1,40 @@
+@import '../../sass/utils/variables';
+
+.OrderCard {
+  gap: 10px;
+  padding: 0;
+  width: 100%;
+  display: grid;
+  text-align: left;
+  justify-items: initial;
+  justify-self: flex-start;
+  justify-content: initial;
+  background-color: $white;
+  grid-template-columns: auto 1fr;
+  border: $border-width solid $border-color;
+}
+
+.OrderCard__image {
+  width: 80px;
+  height: 100%;
+  & img {
+    object-fit: cover;
+    border-radius: $border-radius;
+  }
+}
+
+.OrderCard__body {
+  gap: 4px;
+  padding: 10px;
+  color: $black;
+  font-weight: normal;
+  & p.active {
+    color: $tertiary-color;
+  }
+  & p.delivered {
+    color: $black;
+  }
+  & p.canceled {
+    color: $danger-color;
+  }
+}
